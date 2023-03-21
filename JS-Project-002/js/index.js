@@ -23,5 +23,16 @@ for (k = 0; k < btn_tab_nav_li.length; k++) {
 
         // 设置点击样式
         this.className = 'btn-active';
+
+        // 获取当前选项卡导航li的自定义属性index
+        var index = this.getAttribute("index");
+
+        // 先隐藏所有选项卡项目
+        for (var i = 0; i < btn_tab_item_li.length; i++) {
+            btn_tab_item_li[i].style.display = "none";
+        }
+
+        // 单机选项卡导航时显示
+        btn_tab_item_li[index].style.display = "block";
     }
 }
