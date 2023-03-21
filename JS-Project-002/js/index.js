@@ -14,8 +14,9 @@ btn_tab_item_li[0].style.display = 'block';
 for (k = 0; k < btn_tab_nav_li.length; k++) {
     // 为所有li设置自定义属性index，用来检索选项卡项目
     btn_tab_nav_li[k].setAttribute('index', k);
-
+    // 为所有li注册单击事件
     btn_tab_nav_li[k].onclick = function () {
+        // 先清除所有选项卡导航样式
         for (x = 0; x < btn_tab_nav_li.length; x++) {
             btn_tab_nav_li[x].removeAttribute('class');
         }
