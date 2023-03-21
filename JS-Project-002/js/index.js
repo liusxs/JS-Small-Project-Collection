@@ -11,13 +11,16 @@ for (i = 0; i < btn_tab_item_li.length; i++) {
 btn_tab_item_li[0].style.display = 'block';
 
 // 循环遍历选项卡导航菜单li
-for ( k = 0; k < btn_tab_nav_li.length; k++) {
+for (k = 0; k < btn_tab_nav_li.length; k++) {
     // 为所有li设置自定义属性index，用来检索选项卡项目
-    btn_tab_nav_li[k].setAttribute('index',k);
+    btn_tab_nav_li[k].setAttribute('index', k);
 
-    btn_tab_nav_li[k].onclick = function(){
-        for ( x = 0; x < btn_tab_nav_li.length; x++){
+    btn_tab_nav_li[k].onclick = function () {
+        for (x = 0; x < btn_tab_nav_li.length; x++) {
             btn_tab_nav_li[x].removeAttribute('class');
         }
+
+        // 设置点击样式
+        this.className = 'btn-active';
     }
 }
